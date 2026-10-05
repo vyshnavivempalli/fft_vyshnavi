@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Student Result Dashboard</title>
+     <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: white;
+            background: url("/Users/vyshnavi/Downloads/WhatsApp Image 2026-09-30 at 23.33.58.jpeg");
+            background-size: contain;
+        }
+        form{
+            width: 350px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+        h1{
+            text-align: center;
+            color: blue;
+        }
+        label{
+            font-weight: bold;
+        }
+        input{
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        button{
+            padding: 8px 15px;
+            margin-right: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: darkblue;
+        }
+        #Para{
+            margin-top: 20px;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid blue;
+        }
+     </style>   
+</head>
+<body>
+    <form>
+        <h1>Interactive Student Result Dashboard</h1>
+        <label>Student Name</label>
+        <input type="text" name="n1" id="i1"><br><br>
+        <label>Student Regression</label>
+        <input type="number" name="n2" id="i2"><br><br>
+        <label>Html Marks</label>
+        <input type="number"name="n3" id="i3"><br><br>
+        <label>CSS Marks</label>
+        <input type="number" name="n4" id="i4"><br><br>
+        <label>JS Marks</label>
+        <input type="number" name="n5" id="i5"><br><br>
+        <button type="button" onclick="check()">Results</button>
+        <button>Reset</button>
+        <p id="Para"></p>
+    </form>
+    <script>
+        function check(){
+            let n1 = document.getElementById("i1").value;
+            let n2 = document.getElementById("i2").value;
+            let n3 = Number(document.getElementById("i3").value);
+            let n4 = Number(document.getElementById("i4").value);
+            let n5 = Number(document.getElementById("i5").value);
+            let total= n3+n4+n5;
+            let avg = total/3;
+            let percentage = (total/300)*100;
+            if(avg >= 80){
+                grade = "A";
+            }else if(avg >= 60){
+                grade = "B";
+            }else if(avg >=40){
+                grade = "C";
+            }else if(avg < 40){
+                grade = "D"
+            }else{
+                grade = "Absent";
+            }
+            let status;
+            if(avg >= 40){
+                status = "Pass";
+            }else{
+                status ="Fail";
+            }
+            document.getElementById('Para').innerHTML=
+            "<h1>Student Details</h1>"+"<br>"+
+            "Student Name: "+n1+"<br>"+
+            "Student Reg: "+n2+"<br>"+
+            "HTML Marks: "+n3+"<br>"+
+            "CSS Marks: "+n4+"<br>"+
+            "Js Marks: "+n5+"<br>"+
+            "Total Marks: "+total+"<br>"+
+            "Average Marks: "+avg+"<br>"+
+            "Percentage Marks: "+percentage+"<br>"+
+            "Grade: "+grade+"<br>"+
+            "Status: "+status+"<br>"
+        };
+    </script>
+</body>
+</html>
