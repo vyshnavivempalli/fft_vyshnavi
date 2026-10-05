@@ -1,0 +1,215 @@
+<html>
+<head>
+    <title>Transitions and Animations</title>
+    <style>
+        button {
+            margin-left: 130px;
+            width: 100px;
+            height: 50px;
+            background-color: rgb(233, 150, 48);
+            border: none;
+            border-radius: 50px;
+            transition: 1s;
+        }
+        button:hover {
+
+            background-color: rgb(37, 143, 209);
+            transform: scale(1.1);
+        }
+        .b1 {
+
+            margin-left: 130px;
+            width: 100px;
+            height: 50px;
+            background-color: rgb(224, 218, 41);
+            border: none;
+            border-radius: 3px;
+            transition: 1s;
+        }
+        .b1:hover {
+
+            background-color: rgb(97, 240, 92);
+            transform: translateY(-10px);
+        }
+        .b2 {
+
+            margin-left: 130px;
+            width: 100px;
+            height: 50px;
+            background-color: rgb(135, 131, 79);
+            border: none;
+            border-radius: 7px;
+            transition: 1s;
+        }
+        .b2:hover {
+
+            background-color: rgb(168, 149, 42);
+            transform: rotate(15deg);
+        }
+        .b3 {
+
+            margin-left: 130px;
+            width: 100px;
+            height: 50px;
+            background-color: rgb(158, 47, 171);
+            border: none;
+            border-radius: 70px;
+            transition: 1s;
+        }
+        .b3:hover {
+
+            background-color: rgb(136, 95, 45);
+            transform: skew(10deg);
+        }
+        .b4 {
+
+            margin-left: 130px;
+            width: 100px;
+            height: 50px;
+            background-color: rgb(80, 180, 220);
+            border: none;
+            border-radius: 10px;
+            transition: 1s;
+        }
+        .b4:hover {
+
+            background-color: purple;
+            transform: rotate(-15deg) scale(1.1);
+        }
+        .box {
+
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            animation: vyshu 2s ease-in-out alternate infinite;
+        }
+        .box2 {
+
+            margin-left: 130px;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(85, 140, 168);
+            border-radius: 100%;
+            animation: hello 2s ease-in-out alternate infinite;
+        }
+        .box3 {
+
+            margin-left: 250px;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(162, 121, 54);
+            animation: hi 2s ease-in-out alternate infinite;
+        }
+        .box4 {
+
+            margin-left: 350px;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(164, 33, 88);
+            animation: bye 2s linear infinite;
+        }
+        .load {
+
+            width: 100px;
+            height: 100px;
+            border: 5px solid rgb(121, 47, 47);
+            border-top: 5px solid rgb(105, 105, 138);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        .load1 {
+
+            width: 100px;
+            height: 100px;
+            border: 10px solid rgb(86, 120, 70);
+            border-top: 10px solid rgb(213, 215, 57);
+            animation: spin1 2s linear infinite;
+        }
+        @keyframes vyshu {
+
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(200px);
+            }
+        }
+        @keyframes hello {
+
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-80px);
+            }
+        }
+        @keyframes hi {
+
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.5);
+            }
+        }
+        @keyframes bye {
+
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes spin {
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes spin1 {
+
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(180deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Transitions & Animations</h1>
+
+    <button class="b1">Action</button>
+    <button class="b2">Action</button>
+    <button class="b3">Action</button>
+    <button class="b4">Action</button>
+    <br><br><br>
+    <div class="box"></div>
+    <br><br><br>
+    <div class="box2"></div>
+    <br><br><br>
+    <div class="box3"></div>
+    <br><br><br>
+    <div class="box4"></div>
+    <br><br><br>
+    <div class="load"></div>
+    <br><br>
+    <div class="load1"></div>
+
+</body>
+
+</html>
