@@ -1,0 +1,85 @@
+<html>
+<head>
+    <title>Grade Calculator</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightblue;
+        }
+        .box {
+            width: 350px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+        }
+        input {
+            width: 90%;
+            padding: 8px;
+            margin: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        h2 {
+            color: blue;
+        }
+        #result {
+            color: green;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <h2>Grade Calculator</h2>
+    <input type="text" id="name" placeholder="Enter Name"><br>
+    <input type="number" id="math" placeholder="Maths Marks"><br>
+    <input type="number" id="science" placeholder="Science Marks"><br>
+    <input type="number" id="english" placeholder="English Marks"><br>
+    <input type="number" id="computer" placeholder="Computer Marks"><br>
+    <button onclick="calculate()">Calculate</button>
+    <button onclick="location.reload()">Reset</button>
+    <h3 id="result"></h3>
+</div>
+<script>
+function calculate() {
+    let name = document.getElementById("name").value;
+    let m = Number(document.getElementById("math").value);
+    let s = Number(document.getElementById("science").value);
+    let e = Number(document.getElementById("english").value);
+    let c = Number(document.getElementById("computer").value);
+    let total = m + s + e + c;
+    let average = total / 4;
+    let percentage = (total / 400) * 100;
+    let grade;
+    if (percentage >= 90)
+        grade = "A+";
+    else if (percentage >= 80)
+        grade = "A";
+    else if (percentage >= 70)
+        grade = "B";
+    else if (percentage >= 60)
+        grade = "C";
+    else if (percentage >= 50)
+        grade = "D";
+    else
+        grade = "F";
+    let status = percentage >= 35 ? "PASS" : "FAIL";
+    document.getElementById("result").innerHTML =
+        "Name: " + name + "<br>" +
+        "Total: " + total + "/400<br>" +
+        "Average: " + average + "<br>" +
+        "Percentage: " + percentage + "%<br>" +
+        "Grade: " + grade + "<br>" +
+        "Result: " + status;
+}
+</script>
+</body>
+</html>
