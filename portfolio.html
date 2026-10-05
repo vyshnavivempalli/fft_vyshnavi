@@ -1,0 +1,104 @@
+<html>
+<head>
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background-color: lightgray;
+        }
+        header {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+       }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+        }
+        .card {
+            background-color: white;
+            padding: 20px;
+        }
+        .card:hover {
+            background-color: lightblue;
+            transition: 0.3s;
+        }
+        li {
+            display: inline-block;
+            background-color: white;
+            padding: 10px;
+            margin: 5px;
+        }
+        input {
+            display: block;
+            width: 80%;
+            padding: 10px;
+            margin: 10px auto;
+        }
+        textarea {
+            display: block;
+            width: 80%;
+            padding: 10px;
+            margin: 10px auto;
+        }
+        button {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+        }
+        @media (max-width: 600px) {
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>My Portfolio</h1>
+    <p>Web Developer</p>
+</header>
+<section>
+    <h2>My Projects</h2>
+    <div class="projects">
+        <div class="card">
+            <h3>Project 1</h3>
+            <p>Portfolio Website</p>
+        </div>
+        <div class="card">
+            <h3>Project 2</h3>
+            <p>Shopping Website</p>
+        </div>
+        <div class="card">
+            <h3>Project 3</h3>
+            <p>Travel Website</p>
+        </div>
+    </div>
+</section>
+<section>
+    <h2>My Skills</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>CSS Grid</li>
+        <li>JavaScript</li>
+    </ul>
+</section>
+<section>
+    <h2>Contact Me</h2>
+    <form>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Message"></textarea>
+        <button>Send</button>
+    </form>
+</section>
+</body>
+</html>
